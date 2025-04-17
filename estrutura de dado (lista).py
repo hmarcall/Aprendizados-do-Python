@@ -81,4 +81,14 @@ print (lista2)
 #CLEAR
 carrinho = ['celular', 'notebook', 'mouse']
 carrinho.clear()
-print (carrinho)'''
+print (carrinho)
+
+
+
+#USANDO O .SORT()
+lista=[]
+for i in range(1, 6):
+    digit = input('Digite um nome: ')
+    lista.append(digit)
+    lista.sort()
+print(lista)'''

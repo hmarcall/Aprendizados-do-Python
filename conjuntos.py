@@ -4,7 +4,7 @@ print(conjunto)
 
 conjunto = set({1, 2, 3, 4, 5})
 for i in conjunto:
-    print(i)
+    print(i)'''
 
 
      
@@ -22,7 +22,7 @@ print(meu_Conjunto)
 
 
 #UNIÃO, INTERSEÇÃO E DIFERENÇA DE CONJUNTOS
-conj1 = {1, 2, 3}
+'''conj1 = {1, 2, 3}
 conj2 = {3, 4, 5}
 conj3 = {5, 6, 7}
 uniao = conj1.union(conj2,conj3)
@@ -41,7 +41,7 @@ print(dif_Sim)
 #ISSUBSET()
 conj1 = {1, 2, 3}
 conj2 = {1, 2, 3, 4, 5}
-print(conj1.issubset(conj2))'''
+print(conj2.issubset(conj1))'''
 
 
 

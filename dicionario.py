@@ -60,16 +60,21 @@ dicio ['cidade']= str(input('Digite sua cidade: '))
 dicio ['peso']= float(input('Digite seu peso: '))
 print(dicio)
 
+pessoas = []'''
+
 pessoas = []
 
 while True:
     pessoa = {}
-    pessoa['nome'] = str(input('Digite seu nome: '))
+    pessoa['nome'] = input('Digite seu nome: ')
     pessoa['idade'] = int(input('Digite sua idade: '))
 
     pessoas.append(pessoa)
-    parar = str(input('Deseja continuar parar? Para parar digite "s", para continuar dogite "n".'))
-    if parar == 's':
+    
+    parar = input('Deseja parar? Para parar digite "s", para continuar digite "n": ')
+    if parar.lower() == 's':
         break
-for p in pessoas:
-    print (p)'''
+
+for i in pessoas:
+    print(pessoas)
+

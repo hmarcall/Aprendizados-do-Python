@@ -11,7 +11,7 @@ print(dicionario)
 del dicionario['Profissa']
 print (dicionario)
 
-#MESCLAR (.upgrade())
+#MESCLAR (.update())
 dicio = {
     'a': 1,
     'b': 2,

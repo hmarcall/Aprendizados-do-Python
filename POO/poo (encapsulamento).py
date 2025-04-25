@@ -1,4 +1,4 @@
-'''class Funcionario:
+class Funcionario:
     def __init__(self, nome, salario, senha):
         self.nome = nome
         self._salario = salario
@@ -16,7 +16,7 @@
 login1 = Funcionario('Henrique', 1000, '123456')
 login1.mostrar_dados()
 login1.verificar_senha('123456')
-print(login1._Funcionario__senha)'''
+#print(login1._Funcionario__senha)
 
 
 

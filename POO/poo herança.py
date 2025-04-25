@@ -9,12 +9,13 @@ class Funcionario:
 
 class Gerente(Funcionario):
     def __init__(self, nome, salario, departamento):
-        super().__init__(nome, departamento)
+        super().__init__(nome, salario)
         self.departamento = departamento
   
 
-    def exibir_dados(self):
+    def mostrar_dados(self):
+        super().mostrar_dados()
         print(f'Nome: {self.nome}, Departamento: {self.departamento}')
 
 nome1 = Gerente('Henrique', 1000,'Gerente')
-nome1.exibir_dados()
+nome1.mostrar_dados()

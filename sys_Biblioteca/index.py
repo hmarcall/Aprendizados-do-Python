@@ -1,6 +1,4 @@
 from livro import Livro
-from cad_Usuario import criar_usuario, usuarios, listar_usuario
-
 
 
 catalogo = []

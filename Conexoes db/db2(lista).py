@@ -19,10 +19,12 @@ try:
         cidade = input('Digite a cidade do usuario: ')
         
         # Adiciona os dados como uma lista
-        usuarios.append([nome, idade, sobrenome, cidade])
+        usuarios.append((nome, idade, sobrenome, cidade))
         
         if input('Deseja continuar? (s/n): ').lower() == 'n':
             break
+    
+    print(usuarios)
 
     cursor.executemany(
         "INSERT INTO usuario (nome, idade, sobrenome, cidade) VALUES (?, ?, ?, ?)", usuarios)

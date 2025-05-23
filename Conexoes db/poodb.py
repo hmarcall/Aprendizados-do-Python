@@ -20,24 +20,50 @@ def criar_usuario():
     
     return Usuario(nome, idade, sobrenome, cidade)
 
-# Código principal
-if __name__ == "__main__":
-    banco = PooDB()
+def exibicao (banco):
+    banco.cursor.execute('SELECT nome FROM usuario')
+    return banco.cursor.fetchall()
+
+def deletar(banco, nome):
+    banco.cursor.execute('DELETE FROM usuario WHERE nome = ?', (nome,))
+    banco.conn.commit()
+
+banco = PooDB()
+
+while True:
+    print("\n1 - Cadastrar novo usuário")
+    print('2 - Exibir cadastrados')
+    print('3 - Deletar um usuario')
+    print("4 - Sair")
+    opcao = input("\nEscolha uma opção: ")
     
-    while True:
-        print("\n1 - Cadastrar novo usuário")
-        print("2 - Sair")
-        opcao = input("\nEscolha uma opção: ")
-        
-        if opcao == "1":
-            novo_usuario = criar_usuario()
-            novo_usuario.inserir(banco)
-            print("Usuário cadastrado com sucesso!")
-        elif opcao == "2":
-            print("\nUsuario(s) cadastrado(s) com sucesso!\n")
-            print("Saindo do programa...")
-            banco.encerrar
-            break
+    if opcao == "1":
+        novo_usuario = criar_usuario()
+        novo_usuario.inserir(banco)
+        print("Usuário cadastrado com sucesso!")
+
+    elif opcao =='2':
+        R_usuarios = exibicao(banco)
+        if R_usuarios:
+            print('Usuarios cadastrados: ')
+            for i in R_usuarios:
+                print(i[0])
+
+    elif opcao == "3":
+        D_usuarios = input('Digite o nome do usuario que deseja excluir: ')
+        usuarios_cadastrados = [u[0] for u in exibicao(banco)]
+        if D_usuarios not in usuarios_cadastrados:
+            print ('Usuario não encontrado em nossa base de dados')
         else:
-            print("Opção inválida!")
+            deletar(banco, D_usuarios)
+            print(f'\n{D_usuarios} foi excluido de nossa base de dados')    
+        
+
+    elif opcao == "4":
+        print("Saindo do programa...\n")
+        banco.encerrar()
+        break
+    else:
+        print("Opção inválida!")
+
 

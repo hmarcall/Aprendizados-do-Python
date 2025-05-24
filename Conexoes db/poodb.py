@@ -56,13 +56,13 @@ while True:
             print ('Usuario não encontrado em nossa base de dados')
         else:
             deletar(banco, D_usuarios)
-            print(f'\n{D_usuarios} foi excluido de nossa base de dados')    
-        
+            print(f'\n{D_usuarios} foi excluido de nossa base de dados')           
 
     elif opcao == "4":
         print("Saindo do programa...\n")
         banco.encerrar()
         break
+
     else:
         print("Opção inválida!")
 

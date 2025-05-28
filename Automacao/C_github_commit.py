@@ -13,8 +13,8 @@ with open('Automacao/versao.txt', 'w') as f:
     f.write(nova_versao)
 
 pa.PAUSE = 3
-
-pa.hotkey('ctrl', 'Shift', '`')
+for tecla in ['`', "'"]:
+    pa.hotkey('ctrl', 'shift', tecla)
 pa.write("git add .")
 pa.press('ENTER')
 pa.write(f"git commit -m '{nova_versao}'")

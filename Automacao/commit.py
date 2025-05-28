@@ -14,7 +14,7 @@ with open('Automacao/versao.txt', 'w') as f:
 
 pa.PAUSE = 3
 
-pa.hotkey('ctrl', 'Shift', '`')
+pa.hotkey('ctrl', 'Shift', "'")
 pa.write("git add .")
 pa.press('ENTER')
 pa.write(f"git commit -m '{nova_versao}'")
@@ -22,4 +22,5 @@ pa.press('ENTER')
 time.sleep(3)
 pa.write("git push")
 pa.press('ENTER')
+
  

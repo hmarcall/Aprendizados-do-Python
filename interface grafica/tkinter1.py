@@ -1,4 +1,6 @@
+from tkinter import messagebox
 import customtkinter as tk
+
 
 
 janela = tk.CTk()
@@ -43,5 +45,11 @@ radio2 = tk.CTkRadioButton(janela, text='second option', variable=opcao, value='
 
 radio1.pack()
 radio2.pack()
+
+def alerta():
+    messagebox.showinfo('Alerta','Login bem sucedido!')
+
+botao3 = tk.CTkButton(janela, text='Alert', command=alerta)
+botao3.pack()
 
 janela.mainloop()

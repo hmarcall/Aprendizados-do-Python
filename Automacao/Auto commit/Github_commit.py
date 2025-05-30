@@ -2,7 +2,7 @@ import pyautogui as pa
 import time
 import pyperclip
 
-with open('Automacao/versao.txt', 'r') as f:
+with open('Automacao/Auto commit/versao.txt', 'r') as f:
     versao = f.read().strip()
 
 major, minor = map(int, versao.split('.'))

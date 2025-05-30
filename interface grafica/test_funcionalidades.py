@@ -52,4 +52,18 @@ def alerta():
 botao3 = tk.CTkButton(janela, text='Alert', command=alerta)
 botao3.pack()
 
+
+#*Não roda por que minha "janela" usa o pack() e o frame esta usando o grid()*
+'''def botao1():
+    pass
+frame=tk.CTkFrame(master=janela, corner_radius=10)
+frame.grid(row=0, column=2, padx=10, pady=10, sticky='nsew')
+botao4=tk.CTkButton(master=frame, text='Butãozin', command=botao1)
+botao4.pack(padx=20, pady=20)'''
+
+
+janela.grid_rowconfigure((0,1), weight=1)
+janela.grid_columnconfigure((0,1), weight=1)
+
+
 janela.mainloop()

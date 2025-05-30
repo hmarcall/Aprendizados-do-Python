@@ -50,4 +50,14 @@ checkbox.grid(row=9, column=0, padx=540, pady=(10), sticky='w')
 label3 = ctk.CTkLabel(janela, text='')
 label3.grid(row=11, column=0, padx=470, pady=(10,0), sticky='w')
 
+def botao1():
+    pass
+frame=ctk.CTkFrame(master=janela, corner_radius=10)
+frame.grid(row=0, column=2, padx=10, pady=10, sticky='nsew')
+botao4=ctk.CTkButton(master=frame, text='Butãozin', command=botao1)
+botao4.pack(padx=20, pady=20)
+
+janela.grid_rowconfigure((0,1), weight=1)
+janela.grid_columnconfigure((0,1), weight=1)
+
 janela.mainloop()

@@ -3,11 +3,12 @@ import time
 import webbrowser
 import pyperclip
 
-webbrowser.open("https://mail.google.com")
-time.sleep(4)
 
-pyautogui.click(x=280, y=550)
-time.sleep(2)
+webbrowser.open("https://mail.google.com")
+time.sleep(5)
+
+pyautogui.click(x=150, y=200)
+time.sleep(3)
 
 with open("Automacao/Auto email/email.txt", "r", encoding="utf-8") as f:
     linhas = f.readlines()

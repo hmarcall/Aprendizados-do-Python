@@ -28,7 +28,7 @@ Segue abaixo o relatório atualizado com suas informações:
 Atenciosamente,
 Kayk
 """
-    pyautogui.moveTo(150, 250, duration=1)  # coloque aqui a posição certa
+
     pyautogui.click(x=128, y=178)
     time.sleep(4)
 

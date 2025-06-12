@@ -1,3 +1,0 @@
-para: khsenac@gmail.com
-assunto: Enviado por automacão
-mensagem: Esse texto foi enviado por um codigo de automacão em Python para . Atenciosamente, Henrique.

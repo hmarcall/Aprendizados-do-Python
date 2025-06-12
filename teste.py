@@ -1,6 +1,10 @@
 import pyautogui
 import time
+import webbrowser
 
-print("Movendo o mouse em 3 segundos...")
-time.sleep(3)
-pyautogui.moveTo(500, 500, duration=1)
+webbrowser.open("https://mail.google.com")
+time.sleep(15)  # tempo para carregar o Gmail
+
+# Descubra a posição do botão escrever antes com print(pyautogui.position())
+pyautogui.moveTo(128, 178, duration=1)
+pyautogui.click()
